@@ -13,6 +13,11 @@ namespace StacksAndQueues
             node.Enqueue(30);
             node.Enqueue(70);
             node.Show();
+            node.Dequeue();
+            Console.WriteLine("After dequeue list is:");
+            node.Show();
+            node.Size();
+            
 
         }
     }

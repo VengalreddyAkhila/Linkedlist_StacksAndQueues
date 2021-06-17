@@ -91,7 +91,7 @@ namespace StacksAndQueues
                 }
                 temp.next = node;
             }
-            Console.WriteLine($"element add to Queue: {node.data}");
+            Console.WriteLine("elements add to Queue:" +node.data);
         }
         /// <summary>
         /// show the queue list
@@ -104,6 +104,28 @@ namespace StacksAndQueues
                 Console.WriteLine(temp.data);
                 temp = temp.next;
             }
+        }
+        /// <summary>
+        /// displays the list size
+        /// </summary>
+        public void Size()
+        {
+            int count = 0;
+            while (this.top != null)
+            {
+                count++;
+                this.top = this.top.next;
+            }
+            Console.WriteLine("size of the list:" + count);
+        }
+        /// <summary>
+        /// dequeue which removes the element from top 
+        /// </summary>
+        public void Dequeue()
+        {
+            if (this.top == null)
+                Console.WriteLine("list is empty");
+            this.top = this.top.next;
         }
 
     }
