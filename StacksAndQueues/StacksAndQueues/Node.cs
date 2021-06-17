@@ -49,6 +49,25 @@ namespace StacksAndQueues
                 temp = temp.next;
             }
         }
+        /// <summary>
+        /// removing the top node and allows the next node as top
+        /// </summary>
+        public void pop()
+        {
+            if (this.top == null)
+                return;
+              this.top = this.top.next;
+        }
+        /// <summary>
+        /// peek is to show top element of stack
+        /// </summary>
+        public void peek()
+        {
+            if (this.top == null)
+                Console.WriteLine("stack is empty");
+            else
+                Console.WriteLine(this.top.data);
+        }
     }
     
 }

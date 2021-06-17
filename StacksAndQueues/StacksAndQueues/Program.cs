@@ -12,6 +12,10 @@ namespace StacksAndQueues
             node.Push(30);
             node.Push(70);
             node.Display();
+            node.pop();            
+            Console.WriteLine("after deleted stack list is:");
+            node.Display();
+            node.peek();            
         }
     }
 }
