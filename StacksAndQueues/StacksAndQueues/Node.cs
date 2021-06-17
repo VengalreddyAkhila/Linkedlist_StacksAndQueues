@@ -68,6 +68,44 @@ namespace StacksAndQueues
             else
                 Console.WriteLine(this.top.data);
         }
+        /// <summary>
+        /// Adds the elements in queue 
+        /// </summary>
+        /// <param name="data"></param>
+        public void Enqueue(int data)
+        {
+            Node node = new Node();
+            node.data = data;
+            if (this.top == null)
+            {
+                this.top = node;
+                node.next = null;
+            }
+            else
+            {
+                Node temp = top;
+
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = node;
+            }
+            Console.WriteLine($"element add to Queue: {node.data}");
+        }
+        /// <summary>
+        /// show the queue list
+        /// </summary>
+        public void Show()
+        {
+            Node temp = this.top;
+            while (temp != null)
+            {
+                Console.WriteLine(temp.data);
+                temp = temp.next;
+            }
+        }
+
     }
     
 }
